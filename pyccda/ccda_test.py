@@ -4,7 +4,7 @@ import ccda
 import os
 import unittest
 
-TESTDATA_DIR = os.path.join(os.path.dirname(__file__), 'testdata')
+TESTDATA_DIR = os.path.join(os.path.dirname(__file__), '../testdata')
 
 
 class CcdaDocumentTestCase(unittest.TestCase):
