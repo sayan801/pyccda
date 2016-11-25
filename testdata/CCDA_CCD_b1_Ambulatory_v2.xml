@@ -90,7 +90,7 @@
             use="HP">
             <!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
             <streetAddressLine>1357 Amber Drive</streetAddressLine>
-            <city>Beaverton</city>
+            <city>Kulberia</city>
             <state>OR</state>
             <postalCode>97006</postalCode>
             <country>US</country>
@@ -154,7 +154,7 @@
                   use="HP">
                   <!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
                   <streetAddressLine>1357 Amber Drive</streetAddressLine>
-                  <city>Beaverton</city>
+                  <city>Kulberia</city>
                   <state>OR</state>
                   <postalCode>97006</postalCode>
                   <country>US</country>
@@ -173,7 +173,7 @@
             <birthplace>
                <place>
                   <addr>
-                     <city>Beaverton</city>
+                     <city>Kulberia</city>
                      <state>OR</state>
                      <postalCode>97006</postalCode>
                      <country>US</country>
@@ -400,7 +400,7 @@
             use="HP">
             <!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
             <streetAddressLine>1357 Amber Drive</streetAddressLine>
-            <city>Beaverton</city>
+            <city>Kulberia</city>
             <state>OR</state>
             <postalCode>97006</postalCode>
             <country>US</country>
@@ -427,7 +427,7 @@
             use="HP">
             <!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
             <streetAddressLine>1357 Amber Drive</streetAddressLine>
-            <city>Beaverton</city>
+            <city>Kulberia</city>
             <state>OR</state>
             <postalCode>97006</postalCode>
             <country>US</country>
