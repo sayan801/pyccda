@@ -12,6 +12,7 @@ import cStringIO
 import csv
 import datetime
 import messages
+from protorpc import protojson
 
 
 class Root(object):
@@ -171,6 +172,12 @@ class CcdaDocument(object):
   def __init__(self, fp):
     self._tree = CcdaTree(fp)
 
+  def get_vitals_json(self):
+    message = self.to_message()
+    #return protojson.MessageJSONEncoder(message.vitals).encode_message()  
+    return protojson.encode_message(message)
+    #return message.vitals
+      
   def to_csv(self):
     """Converts the CCDA document to a CSV file."""
     message = self.to_message()
@@ -230,6 +237,8 @@ class CcdaDocument(object):
       code_node = product_node.getElementsByTagName('code')[0]
       product_code = CcdaTree.get_code_from_node(code_node)
       immunization.product.code = messages.Code(**product_code)
+      
+      doc.immunizations.append(immunization)
 
     # Labs.
     doc.labs = []
