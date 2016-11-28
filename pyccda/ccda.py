@@ -172,7 +172,7 @@ class CcdaDocument(object):
   def __init__(self, fp):
     self._tree = CcdaTree(fp)
 
-  def get_vitals_json(self):
+  def to_json(self):
     message = self.to_message()
     #return protojson.MessageJSONEncoder(message.vitals).encode_message()  
     return protojson.encode_message(message)
