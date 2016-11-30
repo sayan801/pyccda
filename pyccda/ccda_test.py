@@ -25,14 +25,16 @@ class CcdaDocumentTestCase(unittest.TestCase):
 
   def test_sample_ccda_files(self):
     """Test all sample CCDA files in the testdata directory."""
+    count = 0 
     for basename in os.listdir(TESTDATA_DIR):	
       path = os.path.join(TESTDATA_DIR, basename)
-      print path + ' --- start'
+      count = count + 1
+      print path + ' --- start---- ' + str(count)
       fp = open ( path ) 
       fp.seek(0)
       self._test_to_message(fp)
       fp.close()
-      print path + ' --- end'
+      print path + ' --- end---- '  + str(count)
 
 
 if __name__ == '__main__':
