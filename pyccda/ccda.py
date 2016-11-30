@@ -268,21 +268,24 @@ class CcdaDocument(object):
 
     # Labs.
     doc.labs = []
-    lab_parent = self._tree.get_entries_by_template(Root.LAB)[0]
-    entries = lab_parent.getElementsByTagName('entry')
-    for entry in entries:
-      lab = messages.Lab()
-      code_node = entry.getElementsByTagName('code')[0]
-      lab_code = CcdaTree.get_code_from_node(code_node)
-      lab.code = messages.Code(**lab_code)
+    lab_parent = self._tree.get_entries_by_template(Root.LAB)
+    if lab_parent: 
+        entries = lab_parent[0].getElementsByTagName('entry')
+        for entry in entries:
+          lab = messages.Lab()
+          code_node = entry.getElementsByTagName('code')[0]
+          lab_code = CcdaTree.get_code_from_node(code_node)
+          lab.code = messages.Code(**lab_code)
 
-      lab.result = messages.LabResult()
-      component_node = entry.getElementsByTagName('component')[0]
-      result_code_node = component_node.getElementsByTagName('code')[0]
-      result_code = CcdaTree.get_code_from_node(result_code_node)
-      lab.result.code = messages.Code(**result_code)
+          lab.result = messages.LabResult()
+          component_node = entry.getElementsByTagName('component')[0]
+          result_code_node = component_node.getElementsByTagName('code')[0]
+          result_code = CcdaTree.get_code_from_node(result_code_node)
+          lab.result.code = messages.Code(**result_code)
+          
+          doc.labs.append(lab)
 
-      doc.labs.append(lab)
+      
 
     # Medications.
     doc.medications = []
@@ -340,17 +343,18 @@ class CcdaDocument(object):
 
     # Procedures.
     doc.procedures = []
-    procedure_parent = self._tree.get_entries_by_template(Root.PROCEDURE)[0]
-    entries = procedure_parent.getElementsByTagName('entry')
-    for entry in entries:
-      procedure = messages.Procedure()
-      code_node = entry.getElementsByTagName('code')[0]
-      procedure_code = CcdaTree.get_code_from_node(code_node)
-      procedure.code = messages.Code(**procedure_code)
-      procedure.date = CcdaTree.get_date_from_effective_time(entry)
+    procedure_parent = self._tree.get_entries_by_template(Root.PROCEDURE)
+    if procedure_parent:
+        entries = procedure_parent[0].getElementsByTagName('entry')
+        for entry in entries:
+          procedure = messages.Procedure()
+          code_node = entry.getElementsByTagName('code')[0]
+          procedure_code = CcdaTree.get_code_from_node(code_node)
+          procedure.code = messages.Code(**procedure_code)
+          procedure.date = CcdaTree.get_date_from_effective_time(entry)
 
-      # TODO: Implement specimen, performer, device.
-      doc.procedures.append(procedure)
+          # TODO: Implement specimen, performer, device.
+          doc.procedures.append(procedure)
 
     # Vitals.
     doc.vitals = []
