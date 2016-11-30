@@ -87,7 +87,8 @@ class CcdaTree(object):
 
   def get_dob(self):
     val = self._get_element_by_tag_name('birthTime').getAttribute('value')
-    return datetime.datetime.strptime(val, '%Y%M%d')
+    #return datetime.datetime.strptime(val, '%Y%M%d')
+    return self.get_date_from_value(val)
 
   def get_gender(self):
     return self._get_code_from_tag_name('administrativeGenderCode')

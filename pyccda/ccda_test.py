@@ -9,12 +9,12 @@ TESTDATA_DIR = os.path.join(os.path.dirname(__file__), '../testdata')
 
 class CcdaDocumentTestCase(unittest.TestCase):
 
-  def _test_to_csv(self, fp):
-    """Verify CCDA document can be converted to a CSV file."""
-    ccda_doc = ccda.CcdaDocument(fp)
-    ccda_csv = ccda_doc.to_csv()
-    self.assertTrue(ccda_csv)
-    # TODO: Implement stronger test. Verify generated CSV against testdata.
+  #def _test_to_csv(self, fp):
+  #  """Verify CCDA document can be converted to a CSV file."""
+  #  ccda_doc = ccda.CcdaDocument(fp)
+  #  ccda_csv = ccda_doc.to_csv()
+  #  self.assertTrue(ccda_csv)
+  # TODO: Implement stronger test. Verify generated CSV against testdata.
 
   def _test_to_message(self, fp):
     """Verify CCDA document can be converted to a ProtoRPC message."""
@@ -25,12 +25,14 @@ class CcdaDocumentTestCase(unittest.TestCase):
 
   def test_sample_ccda_files(self):
     """Test all sample CCDA files in the testdata directory."""
-    for basename in os.listdir(TESTDATA_DIR):
-      fp = open(os.path.join(TESTDATA_DIR, basename))
-      self._test_to_csv(fp)
+    for basename in os.listdir(TESTDATA_DIR):	
+      path = os.path.join(TESTDATA_DIR, basename)
+      print path + ' --- start'
+      fp = open ( path ) 
       fp.seek(0)
       self._test_to_message(fp)
       fp.close()
+      print path + ' --- end'
 
 
 if __name__ == '__main__':
