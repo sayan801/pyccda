@@ -255,16 +255,18 @@ class CcdaDocument(object):
     doc.immunizations = []
     entries = self._tree.get_entries_by_template(Root.IMMUNIZATION)
     for entry in entries:
-      product_node = self._tree.get_entries_by_template(
-          Root.IMMUNIZATION_PRODUCT, parent=entry)[0]
-      immunization = messages.Immunization()
-      immunization.date = CcdaTree.get_date_from_effective_time(entry)
-      immunization.product = messages.Product()
-      code_node = product_node.getElementsByTagName('code')[0]
-      product_code = CcdaTree.get_code_from_node(code_node)
-      immunization.product.code = messages.Code(**product_code)
-      
-      doc.immunizations.append(immunization)
+      product_nodes = self._tree.get_entries_by_template(
+          Root.IMMUNIZATION_PRODUCT, parent=entry)
+      if product_nodes:
+        product_node =  product_nodes[0] 
+        immunization = messages.Immunization()
+        immunization.date = CcdaTree.get_date_from_effective_time(entry)
+        immunization.product = messages.Product()
+        code_node = product_node.getElementsByTagName('code')[0]
+        product_code = CcdaTree.get_code_from_node(code_node)
+        immunization.product.code = messages.Code(**product_code)
+
+        doc.immunizations.append(immunization)
 
     # Labs.
     doc.labs = []
