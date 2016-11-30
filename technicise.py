@@ -6,6 +6,7 @@ ccda = pyccda.CcdaDocument(open('testdata/example2.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/Vitera_CCDA_SMART_Sample.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/Patient-540.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/InPt_Discharge_Summary_CED_Type.xml') )
+#ccda = pyccda.CcdaDocument(open('testdata/AdamEveryman-ReferralSummary.xml') )
     # Returns CCDA represented as a simple CSV, which can be
     # useful to load data into an external data analysis tool.
 #print ccda.to_csv()

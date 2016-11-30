@@ -370,7 +370,11 @@ class CcdaDocument(object):
         value_node = result_entry.getElementsByTagName('value')[0]
         vital_result_code = CcdaTree.get_code_from_node(code_node)
         vital_result.code = messages.Code(**vital_result_code)
-        vital_result.value = long(float(value_node.getAttribute('value')))
+        value_attribute = value_node.getAttribute('value')
+        if value_attribute:
+            vital_result.value = long(float(value_attribute))
+        else:
+            vital_result.value = None
         vital_result.unit = value_node.getAttribute('unit')
         vital.results.append(vital_result)
       doc.vitals.append(vital)
