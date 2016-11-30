@@ -136,16 +136,33 @@ class CcdaTree(object):
 
   @classmethod
   def get_date_from_effective_time(cls, entry):
-    val = entry.getElementsByTagName('effectiveTime')[0].getAttribute('value')
-    return cls.get_date_from_value(val)
-
+    effectiveTime_nodes =  entry.getElementsByTagName('effectiveTime') 
+    returnVal = None
+    for effectiveTime_node in effectiveTime_nodes:
+      val = effectiveTime_node.getAttribute('value')  if effectiveTime_node else None
+      if val is None:
+        low_nodes = effectiveTime_node.getElementsByTagName('low')
+        val = low_nodes[0].getAttribute('value') if low_nodes else None    
+      returnVal =  cls.get_date_from_value(val)
+    return returnVal
+    
   @classmethod
   def get_date_from_value(cls, val):
-    if len(val) == len('YYYYMMDD'):
-      datetime_format = '%Y%m%d'
-    elif len(val) == len('YYYYMMDDHHMMSS'):
-      datetime_format = '%Y%m%d%H%M%S'
-    return datetime.datetime.strptime(val, datetime_format)
+    if val is None:
+        return None
+    else:
+        if len(val) == len('YYYYMMDD'):
+          datetime_format = '%Y%m%d'
+        elif len(val) == len('YYYYMMDDHHMMSS'):
+          datetime_format = '%Y%m%d%H%M%S'
+        elif len(val) == len('YYYYMMDDHHMM'):
+          datetime_format = '%Y%m%d%H%M'  
+        elif len(val) == len('YYYYMMDDHHMMSS-mmmm'):
+          datetime_format = '%Y%m%d%H%M%S-%f'  
+        else:
+          return None #      datetime_format = '%Y%m%d%H%M%S' 
+      
+        return datetime.datetime.strptime(val, datetime_format)
 
   @classmethod
   def get_date_range_from_node(cls, date_node):
@@ -297,9 +314,10 @@ class CcdaDocument(object):
       problem_code = CcdaTree.get_code_from_node(code_node)
       problem.code = messages.Code(**problem_code)
 
-      date_node = entry.getElementsByTagName('effectiveTime')[0]
-      date_range = CcdaTree.get_date_range_from_node(date_node)
-      problem.date_range = messages.DateRange(**date_range)
+      date_nodes = entry.getElementsByTagName('effectiveTime')
+      for date_node in date_nodes:
+       date_range = CcdaTree.get_date_range_from_node(date_node)
+       problem.date_range = messages.DateRange(**date_range)
 
       status_nodes = self._tree.get_entries_by_template(Root.PROBLEM_STATUS,
                                                        parent=entry)
