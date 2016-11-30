@@ -83,7 +83,15 @@ class CcdaTree(object):
     return CcdaTree.get_code_from_node(node)
 
   def _get_value_of_child_by_tag_name(self, parent_node, tag_name):
-    return parent_node.getElementsByTagName(tag_name)[0].firstChild.nodeValue
+    current_node = parent_node.getElementsByTagName(tag_name)  
+    if not current_node: 
+     return None
+    else:
+     current_node_val =  current_node[0].firstChild
+     if not current_node_val: 
+      return None
+     else:
+      return current_node_val.nodeValue   
 
   def get_dob(self):
     val = self._get_element_by_tag_name('birthTime').getAttribute('value')
