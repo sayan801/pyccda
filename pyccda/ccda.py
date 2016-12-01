@@ -18,6 +18,9 @@ from protorpc import protojson
 class Root(object):
   """The "root" attribute of templateId elements."""
   ALLERGY = '2.16.840.1.113883.10.20.22.4.7'
+  ALLERGY_REACTION = '2.16.840.1.113883.10.20.22.4.9'
+  ALLERGY_SEVERITY = '2.16.840.1.113883.10.20.22.4.8'
+  ALLERGY_STATUS = '2.16.840.1.113883.10.20.22.4.28'
   ENCOUNTER = '2.16.840.1.113883.10.20.22.4.49'
   IMMUNIZATION = '2.16.840.1.113883.10.20.22.2.2.1'
   IMMUNIZATION_PRODUCT = '2.16.840.1.113883.10.20.22.4.54'
@@ -190,7 +193,7 @@ class CcdaTree(object):
     quantity.value = node.getAttribute('value')
     quantity.unit = node.getAttribute('unit')
     return quantity
-
+  
 
 class CcdaDocument(object):
   """A CCDA document that can be represented in various ways."""
@@ -230,10 +233,7 @@ class CcdaDocument(object):
     """Converts the CCDA document to a ProtoRPC message."""
     # TODO: Remove duplicate code.
     doc = messages.CcdaDocument()
-
-    # Allergies.
-    # TODO: Implement allergies.
-    doc.allergies = [messages.Allergy()]
+     
 
     # Demographics.
     doc.demographics = messages.Demographic()
@@ -250,7 +250,60 @@ class CcdaDocument(object):
         **self._tree.get_religion())
     doc.demographics.birthplace = messages.Address(
         **self._tree.get_birthplace())
-
+    
+    # Allergies.
+    # TODO: Implement allergies.
+    doc.allergies = []
+    entries = self._tree.get_entries_by_template(Root.ALLERGY)
+    for entry in entries:
+        allergy = messages.Allergy()
+        participantVal = entry.getElementsByTagName('participant')
+        
+        if participantVal:
+            participantRoleVal = participantVal[0].getElementsByTagName('participantRole')
+            if participantRoleVal:
+                playingEntityVal = participantRoleVal[0].getElementsByTagName('playingEntity')
+                if playingEntityVal:
+                    codeVals = playingEntityVal[0].getElementsByTagName('code')
+                    if codeVals:
+                        codeVal = codeVals[0]  
+                        allergy.code = messages.Code()
+                        allergy.code.code  = codeVal.getAttribute('code')
+                        allergy.code.name = codeVal.getAttribute('displayName')
+                        allergy.code.code_system = codeVal.getAttribute('codeSystem')
+                        allergy.code.code_system_name = codeVal.getAttribute('codeSystemName')
+        
+        allergyReactionNode = self._tree.get_entries_by_template(Root.ALLERGY_REACTION,entry)   
+        
+        if allergyReactionNode:
+            allergyReactionObservationNode = allergyReactionNode[0]
+            if allergyReactionObservationNode:
+                valueVals = allergyReactionObservationNode.getElementsByTagName('value')
+                if valueVals:
+                    valueval = valueVals[0]
+                    allergy.reaction = messages.Code()                    
+                    allergy.reaction.code  = valueval.getAttribute('code')
+                    allergy.reaction.name = valueval.getAttribute('displayName')
+                    allergy.reaction.code_system = valueval.getAttribute('codeSystem')
+                    allergy.reaction.code_system_name = valueval.getAttribute('codeSystemName')
+       
+        allergySeverityNode = self._tree.get_entries_by_template(Root.ALLERGY_SEVERITY,entry)   
+        
+        if allergySeverityNode:
+            allergySeverityObservationNode = allergySeverityNode[0]
+            if allergySeverityObservationNode:
+                valueVals = allergySeverityObservationNode.getElementsByTagName('value')
+                if valueVals:
+                    valueval = valueVals[0]
+                    allergy.severity = messages.Code()                    
+                    allergy.severity.code  = valueval.getAttribute('code')
+                    allergy.severity.name = valueval.getAttribute('displayName')
+                    allergy.severity.code_system = valueval.getAttribute('codeSystem')
+                    allergy.severity.code_system_name = valueval.getAttribute('codeSystemName')     
+       
+        doc.allergies.append(allergy)
+        
+        
     # Immunizations.
     doc.immunizations = []
     entries = self._tree.get_entries_by_template(Root.IMMUNIZATION)

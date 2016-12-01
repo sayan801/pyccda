@@ -19,7 +19,7 @@ class DateRange(messages.Message):
 class Allergy(messages.Message):
   code = messages.MessageField(Code, 1)
   date_range = messages.MessageField(DateRange, 2)
-  severity = messages.StringField(3)
+  severity = messages.MessageField(Code, 3)
   reaction = messages.MessageField(Code, 4)
   reaction_type = messages.MessageField(Code, 5)
   allergen = messages.MessageField(Code, 6)
