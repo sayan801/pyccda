@@ -170,7 +170,11 @@ class CcdaTree(object):
         elif len(val) == len('YYYYMMDDHHMM'):
           datetime_format = '%Y%m%d%H%M'  
         elif len(val) == len('YYYYMMDDHHMMSS-mmmm'):
-          datetime_format = '%Y%m%d%H%M%S-%f'  
+            if '-' in val:
+              datetime_format = '%Y%m%d%H%M%S-%f'  
+            elif '+' in val:  
+        #elif len(val) == len('YYYYMMDDHHMMSS+mmmm'):
+              datetime_format = '%Y%m%d%H%M%S+%f' 
         else:
           return None #      datetime_format = '%Y%m%d%H%M%S' 
       
