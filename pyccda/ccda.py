@@ -348,6 +348,9 @@ class CcdaDocument(object):
             if valueVals:
               lab_result.value = valueVals[0].getAttribute('value') 
               lab_result.unit = valueVals[0].getAttribute('unit') 
+            
+            lab_result.date = CcdaTree.get_date_from_effective_time(component_node)
+            
             lab.results.append(lab_result)  
           
           doc.labs.append(lab)
