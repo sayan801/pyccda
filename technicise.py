@@ -2,13 +2,13 @@ import pyccda,xmltodict,json
 
 #ccda = pyccda.CcdaDocument('<?xml version="1.0" encoding="UTF-8"?><note><to>Tove</to><from>Jani</from><heading>Reminder</heading><body>Dont forget me this weekend!</body></note>')
 #ccda = pyccda.CcdaDocument(open('testdata/CCDA_CCD_b1_Ambulatory_v2.xml') )    #CCDA_CCD_b1_Ambulatory_v2.xml'))
-ccda = pyccda.CcdaDocument(open('testdata/example.xml') )
+#ccda = pyccda.CcdaDocument(open('testdata/example.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/ca62bccf-2038-4b11-ab7a-9f6d6902397b.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/Vitera_CCDA_SMART_Sample.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/Patient-140.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/InPt_Discharge_Summary_CED_Type.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/AdamEveryman-ReferralSummary.xml') ) 
-#ccda = pyccda.CcdaDocument(open('testdata/DOC0001.XML') )
+ccda = pyccda.CcdaDocument(open('testdata/DOC0001.XML') )
     # Returns CCDA represented as a simple CSV, which can be
     # useful to load data into an external data analysis tool.
 #print ccda.to_csv()

@@ -348,8 +348,11 @@ class CcdaDocument(object):
 
             valueVals = component_node.getElementsByTagName('value')
             if valueVals:
-              lab_result.value = valueVals[0].getAttribute('value') 
-              lab_result.unit = valueVals[0].getAttribute('unit') 
+              lab_result.value = valueVals[0].getAttribute('value')
+              if lab_result.value:
+               lab_result.unit = valueVals[0].getAttribute('unit') 
+              else:
+               lab_result.value = valueVals[0].firstChild.nodeValue
             
             lab_result.date = CcdaTree.get_date_from_effective_time(component_node)
             
