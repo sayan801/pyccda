@@ -75,7 +75,7 @@ class Immunization(messages.Message):
 class LabResult(messages.Message):
   date = message_types.DateTimeField(1)
   code = messages.MessageField(Code, 2)
-  value = messages.IntegerField(3)
+  value = messages.StringField(3)
   unit = messages.StringField(4)
   # TODO: reference.
 

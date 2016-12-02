@@ -342,6 +342,11 @@ class CcdaDocument(object):
           result_code = CcdaTree.get_code_from_node(result_code_node)
           lab.result.code = messages.Code(**result_code)
           
+          valueVals = component_node.getElementsByTagName('value')
+          if valueVals:
+            lab.result.value = valueVals[0].getAttribute('value') 
+            lab.result.unit = valueVals[0].getAttribute('unit') 
+          
           doc.labs.append(lab)
 
       
@@ -381,9 +386,16 @@ class CcdaDocument(object):
     for entry in entries:
       problem = messages.Problem()
 
-      code_node = entry.getElementsByTagName('code')[0]
-      problem_code = CcdaTree.get_code_from_node(code_node)
-      problem.code = messages.Code(**problem_code)
+      code_node = entry.getElementsByTagName('value')
+#      problem_code = CcdaTree.get_code_from_node(code_node)
+#      problem.code = messages.Code(**problem_code)
+      if code_node:
+        valueval = code_node[0]
+        problem.code = messages.Code()                    
+        problem.code.code  = valueval.getAttribute('code')
+        problem.code.name = valueval.getAttribute('displayName')
+        problem.code.code_system = valueval.getAttribute('codeSystem')
+        problem.code.code_system_name = valueval.getAttribute('codeSystemName') 
 
       date_nodes = entry.getElementsByTagName('effectiveTime')
       for date_node in date_nodes:
