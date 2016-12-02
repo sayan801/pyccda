@@ -82,7 +82,7 @@ class LabResult(messages.Message):
 
 class Lab(messages.Message):
   code = messages.MessageField(Code, 1)
-  result = messages.MessageField(LabResult, 2)
+  results = messages.MessageField(LabResult, 2, repeated=True)
 
 
 class Quantity(messages.Message):
