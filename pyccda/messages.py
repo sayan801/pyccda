@@ -83,7 +83,7 @@ class LabResult(messages.Message):
 class Lab(messages.Message):
   code = messages.MessageField(Code, 1)
   results = messages.MessageField(LabResult, 2, repeated=True)
-
+  component = messages.StringField(3)
 
 class Quantity(messages.Message):
   value = messages.StringField(1)

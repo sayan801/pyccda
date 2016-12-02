@@ -339,10 +339,12 @@ class CcdaDocument(object):
           lab.results = []
           component_nodes = entry.getElementsByTagName('component')
           for component_node in component_nodes:
-            result_code_node = component_node.getElementsByTagName('code')[0]
-            result_code = CcdaTree.get_code_from_node(result_code_node)
+            result_code_nodes = component_node.getElementsByTagName('code')
             lab_result = messages.LabResult()
-            lab_result.code = messages.Code(**result_code)
+            if result_code_nodes:
+              result_code_node = result_code_nodes[0]  
+              result_code = CcdaTree.get_code_from_node(result_code_node)              
+              lab_result.code = messages.Code(**result_code)
 
             valueVals = component_node.getElementsByTagName('value')
             if valueVals:
