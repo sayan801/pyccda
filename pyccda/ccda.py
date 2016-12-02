@@ -71,10 +71,26 @@ class CcdaTree(object):
 
   @classmethod
   def get_code_from_node(cls, node):
+    code_val = None  
+    code_system_val = None
+    name_val = None
+    if node:
+        code_val =  node.getAttribute('code') 
+        if code_val:
+           code_system_val = node.getAttribute('codeSystem')
+           name_val = node.getAttribute('displayName') 
+        else:
+           translation_nodes = node.getElementsByTagName('translation') 
+           if translation_nodes:
+             translation_node = translation_nodes[0]  
+             code_val =  translation_node.getAttribute('code') if translation_node else None  
+             code_system_val = translation_node.getAttribute('codeSystem') if translation_node else None
+             name_val = translation_node.getAttribute('displayName') if translation_node else None
+         
     return {
-        'code': node.getAttribute('code') if node else None,
-        'code_system': node.getAttribute('codeSystem') if node else None,
-        'name': node.getAttribute('displayName') if node else None,
+        'code': code_val,
+        'code_system': code_system_val,
+        'name': name_val,
     }
 
   def _get_element_by_tag_name(self, tag_name):
@@ -352,7 +368,8 @@ class CcdaDocument(object):
               if lab_result.value:
                lab_result.unit = valueVals[0].getAttribute('unit') 
               else:
-               lab_result.value = valueVals[0].firstChild.nodeValue
+                if valueVals[0].firstChild:   
+                   lab_result.value = valueVals[0].firstChild.nodeValue
             
             lab_result.date = CcdaTree.get_date_from_effective_time(component_node)
             
