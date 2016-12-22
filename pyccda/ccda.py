@@ -457,25 +457,27 @@ class CcdaDocument(object):
 
     # Vitals.
     doc.vitals = []
-    entries = self._tree.get_entries_by_template(Root.VITAL)
-    for entry in entries:
-      vital = messages.Vital()
-      vital.date = CcdaTree.get_date_from_effective_time(entry)
-      vital.results = []
-      result_entries = entry.getElementsByTagName('component')
-      for result_entry in result_entries:
-        vital_result = messages.VitalResult()
-        code_node = result_entry.getElementsByTagName('code')[0]
-        value_node = result_entry.getElementsByTagName('value')[0]
-        vital_result_code = CcdaTree.get_code_from_node(code_node)
-        vital_result.code = messages.Code(**vital_result_code)
-        value_attribute = value_node.getAttribute('value')
-        if value_attribute:
-            vital_result.value = long(float(value_attribute))
-        else:
-            vital_result.value = None
-        vital_result.unit = value_node.getAttribute('unit')
-        vital.results.append(vital_result)
-      doc.vitals.append(vital)
+    vitals_parent =  self._tree.get_entries_by_template(Root.VITAL)
+    if vitals_parent:
+        entries = vitals_parent[0].getElementsByTagName('entry')
+        for entry in entries:
+          vital = messages.Vital()
+          vital.date = CcdaTree.get_date_from_effective_time(entry)
+          vital.results = []
+          result_entries = entry.getElementsByTagName('component')
+          for result_entry in result_entries:
+            vital_result = messages.VitalResult()
+            code_node = result_entry.getElementsByTagName('code')[0]
+            value_node = result_entry.getElementsByTagName('value')[0]
+            vital_result_code = CcdaTree.get_code_from_node(code_node)
+            vital_result.code = messages.Code(**vital_result_code)
+            value_attribute = value_node.getAttribute('value')
+            if value_attribute:
+                vital_result.value = long(float(value_attribute))
+            else:
+                vital_result.value = None
+            vital_result.unit = value_node.getAttribute('unit')
+            vital.results.append(vital_result)
+          doc.vitals.append(vital)
 
     return doc
