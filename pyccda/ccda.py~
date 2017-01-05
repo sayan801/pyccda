@@ -170,13 +170,13 @@ class CcdaTree(object):
       val = effectiveTime_node.getAttribute('value')  if effectiveTime_node else None
       if val is None:
 	'''
-	When val is None, for e.g.	
+	When val is None for e.g.	
 		<effectiveTime>
 			<low value="20110213"/>
 			<high nullFlavor="NA"/>
 		</effectiveTime>
 
-	When val is not None, for e.g.
+	When val is not None for e.g.
 		<effectiveTime value="200003231430"/>
 	'''
         low_nodes = effectiveTime_node.getElementsByTagName('low')
