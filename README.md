@@ -37,3 +37,10 @@ Before using, run `pip install -r requirements.txt` to install dependencies.
 
     # Verifies basic functionality against test data.
     python ccda_test.py
+    
+## Checking vitals details (unit and exsiatance of value) and logged information in a log file
+# to run the code use following command.
+python vitals_ccda_test.py
+# to see .log file use following commands..
+cd pyccda
+gedit Vitals_test.log
