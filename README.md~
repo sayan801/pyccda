@@ -44,9 +44,3 @@ python vitals_ccda_test.py
 # to see .log file use following commands..
 cd pyccda
 gedit Vitals_test.log
-
-## To see text files for all vital section from a set of XML files, follow the following commands
-cd pyccda
-python vitals_ccda_test_text_file.py
--- see the .txt files for vital section in /pyccda
-
