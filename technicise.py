@@ -9,7 +9,7 @@ import pyccda,xmltodict,json
 #ccda = pyccda.CcdaDocument(open('testdata/InPt_Discharge_Summary_CED_Type.xml') )
 #ccda = pyccda.CcdaDocument(open('testdata/AdamEveryman-ReferralSummary.xml') ) 
 #ccda = pyccda.CcdaDocument(open('testdata/DOC0002.XML') )  
-ccda = pyccda.CcdaDocument(open('testdata/multiple-bp.xml') ) 
+ccda = pyccda.CcdaDocument(open('testdata/Aggregated-CCD.XML') ) 
 #ccda = pyccda.CcdaDocument(open('testdata/2-problems.xml') ) 
     # Returns CCDA represented as a simple CSV, which can be
     # useful to load data into an external data analysis tool.

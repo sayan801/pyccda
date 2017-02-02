@@ -1,0 +1,2517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ../config/hl7v3/CCD.xsd">
+    <realmCode code="US"/>
+    <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId root="2.16.840.1.113883.10.20.22.1.1"/>
+	<templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+    <id root="ea131503-2658-4fc3-9c79-1548334f97a3"/>
+    <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" displayName="Summarization of episode note" codeSystemName="LOINC"/>
+    <title>Continuity of Care Document</title>
+    <effectiveTime value="20170201202511.622"/>
+    <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+    <languageCode code="en-US"/>
+    
+<recordTarget>
+    <patientRole>
+        <id extension="0000732001" root="2.16.840.1.113883.3.437.4"/>
+        
+        <addr use="HP">
+            <streetAddressLine>12200 NW AMBASSADOR DR</streetAddressLine>
+            <city>KANSAS CITY</city>
+            <state>MO</state>
+            <country>US</country>
+            <postalCode>64163</postalCode>
+        </addr>
+        
+            <telecom use="HP" value="8164062099"/>
+        
+        <patient>
+            <name>
+                <given>LACIEUPGRADE</given>
+                
+                <family>ZZPMTEST</family>
+                
+            </name>
+            <administrativeGenderCode codeSystem="2.16.840.1.113883.5.1" code="M"/>
+            <birthTime value="20050113"/>
+            
+                <maritalStatusCode nullFlavor="UNK"/>
+            
+                <religiousAffiliationCode nullFlavor="UNK"/>
+            
+                <raceCode nullFlavor="UNK"/>
+            
+                <ethnicGroupCode nullFlavor="UNK"/>
+            
+            <languageCommunication>
+                <templateId root='2.16.840.1.113883.3.88.11.83.2'/>
+                <templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.1'/>
+            
+                <languageCode nullFlavor="UNK"/>
+            
+            </languageCommunication>
+        </patient>
+    </patientRole>
+</recordTarget>
+
+    <author>
+        <time value="20170201202511.622"/>
+        <assignedAuthor>
+            <id root="b24a1d9e-91a6-4761-8cd3-fdacb2dbe0af"/>
+            <addr nullFlavor="NA"/>
+            <telecom nullFlavor="NA"/>
+            <assignedPerson>
+                <name>Browsersoft</name>
+            </assignedPerson>
+            <representedOrganization>
+                <id root="71fa3b92-5b69-40c0-be56-655af9d4bab0"/>
+                <name>Lacie</name>
+                <telecom nullFlavor="NA"/>
+                <addr nullFlavor="NA"/>
+            </representedOrganization>
+        </assignedAuthor>
+    </author>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id root="ac377544-67df-4643-bf96-e5ba42b60a18"/>
+                <name>Browsersoft</name>
+                <telecom nullFlavor="NA"/>
+                <addr nullFlavor="NA"/>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+    <documentationOf>
+        <serviceEvent classCode="PCPR">
+            <effectiveTime>
+                <low value="20170201202511.622"/>
+                <high value="20170201202511.622"/>
+            </effectiveTime>
+            <performer typeCode="PRF">
+                <assignedEntity >
+                    <id root="d532fedc-a2a9-49f6-a856-c088556d8dec"/>
+                    <addr nullFlavor="NA"/>
+                    <telecom nullFlavor="NA"/>
+                    <assignedPerson>
+                        <name>Browsersoft</name>
+                    </assignedPerson>
+                </assignedEntity >
+            </performer>
+        </serviceEvent>
+    </documentationOf>
+    <component typeCode="COMP">
+        <structuredBody classCode="DOCBODY" moodCode="EVN">
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section >
+        <templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
+        <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
+        <title>Problems</title>
+        <text>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Status</th>
+                        <th>Onset Date</th>
+                        <th>Classification</th>
+                        <th>Date Reported</th>
+                        <th>Comments</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr ID="PROBSUMMARY_0">
+                        <td ID="PROBKIND_0">Asthma (disorder)</td>
+                        <td ID="PROBSTATUS_0">Active</td>
+                        <td></td>
+                        <td ID="PROBCLASS_0">Problem</td>
+                        <td>01/09/2017</td>
+                        <td ID="PROBCOM_0"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            
+        </text>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <act classCode="ACT" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.3"/>
+                <id root="37d0ed16-c4b8-417b-a4fb-46fc941083b4"/>
+                <code nullFlavor="NA"/>
+                
+                    <statusCode code="active"/>
+                
+
+                <effectiveTime>
+                
+                    <low nullFlavor="UNK"/>
+                    
+                </effectiveTime>
+
+                <author>
+<time value="20170109194315.712"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <entryRelationship typeCode="SUBJ" inversionInd="false">
+                    <observation classCode="OBS" moodCode="EVN">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
+                        <id root="34cadafc-3de4-48fa-ac3c-4ecd2b1f5e41"/>
+                        
+                        <code code="55607006" displayName="Problem" codeSystem="2.16.840.1.113883.6.96"/>
+                        <text><reference value="#PROBSUMMARY_0"/></text>
+                        <statusCode code="completed"/>
+                        <effectiveTime>
+                        
+                            <low nullFlavor="UNK"/>
+                        
+                        </effectiveTime>
+
+                        
+                        <value xsi:type="CD" code="195967001" displayName="Asthma (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                        
+                            <originalText><reference value="#PROBKIND_0"/></originalText>
+                        </value>
+
+                        
+                            <entryRelationship typeCode="REFR">
+                            <!-- Problem Life Cyle Status -->
+                                  <observation classCode="OBS" moodCode="EVN">
+                                        <templateId root="2.16.840.1.113883.10.20.22.4.6"/>
+                                        <!-- Problem status observation template -->
+                                        <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                        <statusCode code="completed"/>
+                                        <value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96">
+                                            <originalText><reference value="#PROBSTATUS_0"/></originalText>
+                                        </value>
+                                  </observation>
+                            </entryRelationship>
+                        
+                            <entryRelationship typeCode="REFR">
+                            <!-- Problem Classification -->
+                                  <observation classCode="OBS" moodCode="EVN">
+                                        <!--<templateId root="2.16.840.1.113883.10.20.1.50"/>-->
+                                        <!-- Problem Classification observation template -->
+                                        <code code="415039016" codeSystem="2.16.840.1.113883.6.1" displayName="Classification"/>
+                                        <statusCode code="completed"/>
+                                        <value xsi:type="CE" code="" displayName="Problem" codeSystem="2.16.840.1.113883.6.96">
+                                            <originalText><reference value="#PROBCLASS_0"/></originalText>
+                                        </value>
+                                  </observation>
+                            </entryRelationship>
+                        
+                    </observation>
+                </entryRelationship>
+            </act>
+        </entry>
+        
+
+    </section>
+</component>
+
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section nullFlavor="NI">
+        <templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+        <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE"/>
+        <title>Medications</title>
+        <text>
+        </text>
+        
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section >
+        <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+        <code code="48765-2" codeSystem="2.16.840.1.113883.6.1"/>
+        <title>Allergies, Adverse Reactions, Alerts</title>
+        <text>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Substance</th>
+                        <th>Category</th>
+                        <th>Reaction</th>
+                        <th>Severity</th>
+                        <th>Reaction type</th>
+                        <th>Status</th>
+                        <th>Date Reported</th>
+                        <th>Comments</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr ID="ALGSUMMARY_0">
+                        <td ID="ALGSUB_0">Peanuts</td>
+                        <td ID="ALGTYPE_0">food allergy</td>
+                        <td ID="ALGREACT_0">Vomiting</td>
+                        <td ID="ALGSEV_0">Requires Tx: Moderate</td>
+                        <td ID="ALGREACTTYPE_0">Allergy</td>
+                        <td ID="ALGSTATUS_0">Active</td>
+                        <td ID="ALGDATE_0"></td>
+                        <td ID="ALGCOM_0"></td>
+                        <td ID="ALGSOURCE_0">Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+        </text>
+
+        <entry>
+            <act classCode="ACT" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.30"/>
+                <!-- Problem Act template -->
+                <id root="20bb2f6b-7234-49bc-a239-15974684b9bd"/>
+                <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts"/>
+                <statusCode code="active"/>
+                <effectiveTime>
+                
+                    <low nullFlavor="UNK"/>
+                
+                </effectiveTime>
+		        <entryRelationship typeCode="SUBJ" inversionInd="false">
+                    <observation classCode="OBS" moodCode="EVN">
+                       <templateId root="2.16.840.1.113883.10.20.22.4.7" />
+                       <!-- Problem observation template -->
+                        <id root="398bbc2d-a8f8-4f6a-a537-61eae798e1dc"/>
+                        <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                        <text><reference value="#ALGSUMMARY_0"/></text>
+                        <statusCode code="completed"/>
+                        <effectiveTime>
+                        
+                            <low nullFlavor="UNK"/>
+                        
+                        </effectiveTime>
+                        
+                        <value xsi:type="CD" code="414285001" displayName="food allergy" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT">
+                            <originalText><reference value="#ALGSUB_0"/></originalText>
+                        </value>
+
+                        <author>
+<time nullFlavor="NA"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                        <participant typeCode="CSM">
+                            <participantRole classCode="MANU">
+                                <playingEntity classCode="MMAT">
+                                    
+                                        <code code="UNK" codeSystem="2.16.840.1.113883.6.88">
+                                    
+                                        <originalText><reference value="#ALGSUB_0"/></originalText>
+                                    </code>
+                                    <name>Peanuts</name>
+                                </playingEntity>
+                            </participantRole>
+                        </participant>
+
+                        
+                            <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                <observation moodCode="EVN" classCode="OBS">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.8" />
+                                    <code displayName="Severity" codeSystem="2.16.840.1.113883.5.4" code="SEV"/>
+                                    <text><reference value="#ALGSEV_0"/></text>
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CD" code="OTH" displayName="Requires Tx: Moderate" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                                </observation>
+                            </entryRelationship>
+                        
+                        <entryRelationship typeCode="SUBJ" inversionInd="true">
+                        <!-- Problem Life Cyle Status -->
+                              <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.28"/>
+                                    <!-- Problem status observation template -->
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status"/>
+                                    <statusCode code="completed"/>
+                                    <value xsi:type="CE" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96">
+                                        <originalText><reference value="#ALGSTATUS_0"/></originalText>
+                                    </value>
+                              </observation>
+                        </entryRelationship>
+
+                        <entryRelationship typeCode="SUBJ" inversionInd="true">
+                            <act classCode="ACT" moodCode="EVN">
+                                <templateId root="2.16.840.1.113883.10.20.22.4.64"/>
+                                <code code="48767-8" displayName="Annotation Comment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                <text><reference value="#ALGCOM_0"/></text>
+                                <statusCode code="completed" />
+                            </act>
+                         </entryRelationship>
+                    </observation>
+		        </entryRelationship>
+            </act>
+        </entry>
+
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section >
+        <templateId root="2.16.840.1.113883.10.20.22.2.2.1"/>
+        <code code="11369-6" displayName="History of immunizations" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+        <title>Immunizations</title>
+        <text>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Immunization</th>
+                        <th>Date Given</th>
+                        <th>Site</th>
+                        <th>Status</th>
+                        <th>Last Updated</th>
+                        <th>Comments</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr ID="IMMUNSUMMARY_0">
+                        <td ID="IMMUNSUB_0">diph/haem b/pertus,whl/tetanus (DPT/Hib)</td>
+                        <td>01/09/2017</td>
+                        <td ID="IMMUNSITE_0"></td>
+                        <td>completed</td>
+                        <td>Taylor</td>
+                        <td ID="IMMUNCOM_0"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            
+        </text>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.52"/>
+                <id root="ec69a5e8-8b9f-4b8f-a479-53032fe9ccd1"/>
+                <code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
+                <text><reference value="#IMMUNSUMMARY_0"/></text>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109190100.000"/>
+                
+                    <routeCode code="" displayName="Oral" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus"/>
+                
+                    <doseQuantity value="5.0" unit ="mL"/>
+                
+
+                <consumable>
+                    <manufacturedProduct classCode="MANU">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.54"/>
+                        <manufacturedMaterial>
+                            
+                            <code code="999" displayName="diph/haem b/pertus,whl/tetanus (DPT/Hib)" codeSystem="2.16.840.1.113883.12.292" codeSystemName="Vaccine Administered Value Set">
+                            
+                                <originalText><reference value="#IMMUNSUB_0"/></originalText>
+                            </code>
+                            <name>diph/haem b/pertus,whl/tetanus (DPT/Hib)</name>
+                            
+                            <lotNumberText>1</lotNumberText>
+                            
+                       </manufacturedMaterial>
+                       <manufacturerOrganization>
+                           <name>Biotest Pharmaceuticals</name>
+                       </manufacturerOrganization>
+                   </manufacturedProduct>
+               </consumable>
+               
+                   <performer>
+                       <assignedEntity>
+                       
+                           <id extension="6565656565" root="2.16.840.1.113883.3.1294.300"/>
+                       
+                           <addr nullFlavor="UNK"/>
+                           <telecom nullFlavor="UNK"/>
+                           <assignedPerson>
+                               <name>
+                                   <family>Taylor</family>
+                                   <given>Tracy</given>
+                                   <given>E</given>
+                                   
+                               </name>
+                           </assignedPerson>
+                       </assignedEntity>
+                   </performer>
+               
+
+                <author>
+<time value="20170109194315.712"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+            </substanceAdministration>
+        </entry>
+        
+    </section>
+</component>
+
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section >
+        <templateId root="2.16.840.1.113883.10.20.22.2.3.1" />
+        <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="RESULTS"/>
+        <title>Results</title>
+        <text>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Order Name</th>
+                        <th>Results</th>
+                        <th>Value</th>
+                        <th>Reference Range</th>
+                        <th>Date</th>
+                        <th>Interpretation</th>
+                        <th>Comments</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr ID="TESTSUMMARY_0">
+                        <td>Progress Note-Physician</td>
+                        <td ID="TESTNAME_0">Progress Note-Physician</td>
+                        <td ID="TESTRES_0"> <br></br>Patient:   ZZPMTEST, LACIEUPGRADE            MRN: 54817            FIN: 597506             <br></br>Age:   12 years     Sex:  MALE     DOB:  01/13/05 <br></br>Associated Diagnoses:   None <br></br>Author:   Harbert, Jim <br></br> <br></br>Basic Information <br></br>this is a test <br></br> <br></br>Health Status <br></br>Allergies:  <br></br>Allergic Reactions (Selected)<br></br>Severe<br></br>Latex Allergy- No reactions were documented.<br></br>Moderate<br></br>Cats- No reactions were documented.<br></br>Mild<br></br>Bee Stings- No reactions were documented.<br></br>Benadryl- No reactions were documented. <br></br>Problem list (past medical history):  <br></br>All Problems<br></br>Abnormality, eye / SNOMED CT 3006523012 / Confirmed<br></br>Cataract, diabetic / SNOMED CT 73294018 / Confirmed<br></br><br></br><br></br> [Electronically Signed on: 01/27/2017 15:59 CST]&lt;br/&gt;________________________________________&lt;br/&gt;Tdvbcvg, Kwh&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;[Verified on: 01/27/2017 15:59 CST]&lt;br/&gt;________________________________________&lt;br/&gt;Tdvbcvg, Kwh&lt;/br&gt;<br></br>
+  </td>
+                        <td ID="TESTRANGE_0"></td>
+                        <td>01/27/2017</td>
+                        <td></td>
+                        <td ID="TESTCOM_0">[Electronically Signed on: 01/27/2017 15:59 CST]<br/>________________________________________<br/>Tdvbcvg, Kwh<br/><br/><br/><br/><br/>[Verified on: 01/27/2017 15:59 CST]<br/>________________________________________<br/>Tdvbcvg, Kwh<br/></td>
+                        <td>Anthony Medical Center</td>
+                    </tr>
+                
+                    <tr ID="TESTSUMMARY_1">
+                        <td>Progress Note-Physician</td>
+                        <td ID="TESTNAME_1">Progress Note-Physician</td>
+                        <td ID="TESTRES_1"> <br></br>Patient:   ZZPMTEST, LACIEUPGRADE            MRN: 54817            FIN: 597504             <br></br>Age:   12 years     Sex:  MALE     DOB:  01/13/05 <br></br>Associated Diagnoses:   None <br></br>Author:   Harbert, Jim <br></br> <br></br>Health Status <br></br>Allergies:  <br></br>Allergic Reactions (Selected)<br></br>Mild<br></br>Bee Stings- No reactions were documented.,  <br></br>Allergies (1) Active Reaction<br></br>Bee Stings None Documented<br></br><br></br><br></br> [Electronically Signed on: 01/16/2017 16:09 CST]&lt;br/&gt;________________________________________&lt;br/&gt;Tdvbcvg, Kwh&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;[Verified on: 01/16/2017 16:09 CST]&lt;br/&gt;________________________________________&lt;br/&gt;Tdvbcvg, Kwh&lt;/br&gt;<br></br>
+  </td>
+                        <td ID="TESTRANGE_1"></td>
+                        <td>01/16/2017</td>
+                        <td></td>
+                        <td ID="TESTCOM_1">[Electronically Signed on: 01/16/2017 16:09 CST]<br/>________________________________________<br/>Tdvbcvg, Kwh<br/><br/><br/><br/><br/>[Verified on: 01/16/2017 16:09 CST]<br/>________________________________________<br/>Tdvbcvg, Kwh<br/></td>
+                        <td>Anthony Medical Center</td>
+                    </tr>
+                
+                    <tr ID="TESTSUMMARY_2">
+                        <td>XR Chest 2 View</td>
+                        <td ID="TESTNAME_2">XR Chest 2 View</td>
+                        <td ID="TESTRES_2"><br></br><br></br>Children&apos;s Mercy Hospitals &amp; Clinics<br></br>Department of Radiology<br></br>2401 Gillham Road, Kansas City, MO 64108<br></br>(816) 234-3270<br></br><br></br>Patient: Zzpmtest, Lacieupgrade<br></br><br></br>MRN: 4700796<br></br>DOB: 2/13/2005<br></br><br></br>Study Date/Time: 01/09/2017 13:23:09<br></br>Accession: XR-17-000018<br></br>Order ID: 1064102937 <br></br>Procedure Code: 2909341<br></br>Procedure Description: XR Chest 2 View<br></br>Reason for Study: Cough; Call Back: TURNER 71045<br></br><br></br>INDICATION:<br></br><br></br>COMPARISON: None<br></br><br></br>TECHNIQUE: Frontal and lateral radiographs of the chest<br></br><br></br>FINDINGS:<br></br><br></br>The heart is normal in size.<br></br><br></br>The lungs are clear.<br></br><br></br>There is no pneumothorax or pleural effusion.<br></br><br></br>The upper abdomen is normal. No bone abnormality is seen.<br></br><br></br>IMPRESSION:<br></br>Normal chest.<br></br><br></br><br></br><br></br> Signed (Electronic Signature):  GAHEUMDQEAU_YPYECV, OakcuYgumdc  01/09/2017 1:30 pm&lt;/br&gt; Dictated by:  GAHEUMDQEAU_YPYECV, OakcuYgumdc&lt;/br&gt;<br></br>
+  </td>
+                        <td ID="TESTRANGE_2"></td>
+                        <td>01/09/2017</td>
+                        <td></td>
+                        <td ID="TESTCOM_2">Signed (Electronic Signature):  GAHEUMDQEAU_YPYECV, OakcuYgumdc  01/09/2017 1:30 pm<br/>Dictated by:  GAHEUMDQEAU_YPYECV, OakcuYgumdc<br/></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                    <tr ID="TESTSUMMARY_3">
+                        <td>Path Tiss</td>
+                        <td ID="TESTNAME_3">Path Tiss</td>
+                        <td ID="TESTRES_3">  </td>
+                        <td ID="TESTRANGE_3"></td>
+                        <td>01/09/2017</td>
+                        <td></td>
+                        <td ID="TESTCOM_3"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                    <tr ID="TESTSUMMARY_4">
+                        <td>Surg Path Final Report</td>
+                        <td ID="TESTNAME_4">Surg Path Final Report</td>
+                        <td ID="TESTRES_4">Abdomen<br></br>
+<br></br><br></br><content styleCode="Bold">4970629</content><br></br>Pre-op Diagnosis:  abdominal pain<br></br>Post-op Diagnosis: abdominal mass<br></br>Surgical Procedure:  lumpectomy<br></br><br></br>_<br></br>
+<br></br><br></br><content styleCode="Bold">4970630</content><br></br>The adominal mass weight 1.8 grams.  Abnormal growth patterns and striated attachments around the primary liver bed.<br></br>
+<br></br><br></br><content styleCode="Bold">4970631</content><br></br>Microscopic exam shows pathological changes indicative of cancerous growth patterns.  Special stains show that eating chinese food may cause rapid growth of the abdominal region.<br></br>
+<br></br><br></br><content styleCode="Bold">4970661</content><br></br>Abnormal growth caused by excessive chinese food and recommend limiting chinese food to once every other month.<br></br><br></br><br></br> Electronically signed by: Chuck Webster  01/09/2017 13:11&lt;/br&gt;<br></br>
+  </td>
+                        <td ID="TESTRANGE_4"></td>
+                        <td>01/09/2017</td>
+                        <td></td>
+                        <td ID="TESTCOM_4">Electronically signed by: Chuck Webster  01/09/2017 13:11<br/></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                    <tr ID="TESTSUMMARY_5">
+                        <td>CBC</td>
+                        <td ID="TESTNAME_5">WBC</td>
+                        <td ID="TESTRES_5">5.00 x10(3) mcL </td>
+                        <td ID="TESTRANGE_5">4.50 - 14.50</td>
+                        <td>01/09/2017</td>
+                        <td>NA</td>
+                        <td ID="TESTCOM_5"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                    <tr ID="TESTSUMMARY_6">
+                        <td>Fetal Health Clinic Note</td>
+                        <td ID="TESTNAME_6">Fetal Health Clinic Note</td>
+                        <td ID="TESTRES_6">test<br></br><br></br><br></br> Provider Name: Pediatrician Tracy Test, MD, DO&lt;/br&gt; Electronically Signed On:  01/09/17 12:04 PM&lt;/br&gt;<br></br>
+  </td>
+                        <td ID="TESTRANGE_6"></td>
+                        <td>01/09/2017</td>
+                        <td></td>
+                        <td ID="TESTCOM_6">Provider Name: Pediatrician Tracy Test, MD, DO<br/>Electronically Signed On:  01/09/17 12:04 PM<br/></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                    <tr ID="TESTSUMMARY_7">
+                        <td></td>
+                        <td ID="TESTNAME_7">Discharge Summary</td>
+                        <td ID="TESTRES_7">  </td>
+                        <td ID="TESTRANGE_7"></td>
+                        <td>01/09/2017</td>
+                        <td></td>
+                        <td ID="TESTCOM_7"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                    <tr ID="TESTSUMMARY_8">
+                        <td>Discharge Summary</td>
+                        <td ID="TESTNAME_8">Discharge Summary</td>
+                        <td ID="TESTRES_8">test<br></br><br></br><br></br> Provider Name: Pediatrician Tracy Test, MD, DO&lt;/br&gt; Electronically Signed On:  01/09/17 12:02 PM&lt;/br&gt;<br></br>
+  </td>
+                        <td ID="TESTRANGE_8"></td>
+                        <td>01/09/2017</td>
+                        <td></td>
+                        <td ID="TESTCOM_8">Provider Name: Pediatrician Tracy Test, MD, DO<br/>Electronically Signed On:  01/09/17 12:02 PM<br/></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            
+        </text>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="7d3ba9bd-aa51-469b-827c-3b549e5636fe"/>
+                <code code="371526002" displayName="Progress Note-Physician" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170127155800.000"/>
+                
+
+                <author>
+<time value="20170127215952.253"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.981.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Anthony Medical Center</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.981.100"/>
+<name>Anthony Medical Center</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="649b6d87-f386-40e6-957a-4be0cd4155c0"/>
+                        
+                        <code code="ProgressNote-Physician" displayName="Progress Note-Physician" codeSystem="2.16.840.1.113883.3.981.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_0"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_0"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170127155800.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="c07dc382-a977-4c8f-812a-5889aecb3bf2"/>
+                        <code code="ProgressNote-Physician" displayName="Progress Note-Physician" codeSystem="2.16.840.1.113883.3.981.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_0"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_0"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170127155800.000"/>
+                        
+                            <value xsi:type="CD">
+                             <originalText><reference value="#TESTRES_0"/></originalText>
+                            </value>
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Tdvbcvg</family>
+                                        <given>Kwh</given>
+                                        
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                            <informant>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Tdvbcvg</family>
+                                        <given>Kwh</given>
+                                        
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </informant>
+                        
+                            <entryRelationship typeCode="SUBJ">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                                    <code code="48767-8" displayName="Annotation Comment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                    <text><reference value="#TESTCOM_0"/></text>
+                                    <statusCode code="completed" />
+                                </act>
+                            </entryRelationship>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_0"/></text>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="e9b27c24-3896-487a-98c1-3a1ffef15749"/>
+                <code code="371526002" displayName="Progress Note-Physician" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170116160800.000"/>
+                
+
+                <author>
+<time value="20170120155629.669"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.981.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Anthony Medical Center</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.981.100"/>
+<name>Anthony Medical Center</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="fc486eed-12f2-4b30-a187-9cb27624a1a5"/>
+                        
+                        <code code="ProgressNote-Physician" displayName="Progress Note-Physician" codeSystem="2.16.840.1.113883.3.981.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_1"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_1"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170116160800.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="de25dcb3-3a6b-4c7c-aad5-d2e473814453"/>
+                        <code code="ProgressNote-Physician" displayName="Progress Note-Physician" codeSystem="2.16.840.1.113883.3.981.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_1"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_1"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170116160800.000"/>
+                        
+                            <value xsi:type="CD">
+                             <originalText><reference value="#TESTRES_1"/></originalText>
+                            </value>
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Tdvbcvg</family>
+                                        <given>Kwh</given>
+                                        
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                            <informant>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Tdvbcvg</family>
+                                        <given>Kwh</given>
+                                        
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </informant>
+                        
+                            <entryRelationship typeCode="SUBJ">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                                    <code code="48767-8" displayName="Annotation Comment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                    <text><reference value="#TESTCOM_1"/></text>
+                                    <statusCode code="completed" />
+                                </act>
+                            </entryRelationship>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_1"/></text>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="f0c3fc48-10b0-4669-8c55-1ac5c48c09dd"/>
+                <code code="363680008" displayName="XR Chest 2 View" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109132309.000"/>
+                
+
+                <author>
+<time value="20170109193406.102"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                    <participant typeCode="ENT">
+                        <participantRole classCode="PROV">
+                           
+                               <id nullFlavor="UNK"/>
+                           
+                           <playingEntity>
+                               <name>
+                                    <family>Test</family>
+                                    <given>Pediatrician</given>
+                                    <given>Tracy</given>
+                                    
+                               </name>
+                           </playingEntity>
+                        </participantRole>
+                    </participant>
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="471576f6-b547-44cd-9c6e-3f21fd7780b7"/>
+                        
+                        <code code="2909341" displayName="XR Chest 2 View" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_2"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_2"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109132309.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="c743d1ae-829f-4234-9b08-25b0ffef7227"/>
+                        <code code="2909341" displayName="XR Chest 2 View" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_2"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_2"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109132309.000"/>
+                        
+                            <value xsi:type="CD">
+                             <originalText><reference value="#TESTRES_2"/></originalText>
+                            </value>
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <entryRelationship typeCode="SUBJ">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                                    <code code="48767-8" displayName="Annotation Comment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                    <text><reference value="#TESTCOM_2"/></text>
+                                    <statusCode code="completed" />
+                                </act>
+                            </entryRelationship>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_2"/></text>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="9a55578c-cda1-408d-a690-1c28a3b1ca9b"/>
+                <code code="108257001" displayName="Path Tiss" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109130400.000"/>
+                
+
+                <author>
+<time value="20170109191211.507"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                    <participant typeCode="ENT">
+                        <participantRole classCode="PROV">
+                           
+                               <id nullFlavor="UNK"/>
+                           
+                           <playingEntity>
+                               <name>
+                                    <family>Taylor</family>
+                                    <given>Tracy</given>
+                                    <given>E</given>
+                                    
+                               </name>
+                           </playingEntity>
+                        </participantRole>
+                    </participant>
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="f29a367e-9d8e-485b-9b2b-9f3334c70d22"/>
+                        
+                        <code code="PathologyTissueRequest" displayName="Path Tiss" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_3"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_3"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109130400.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="a25db7ce-85ec-4510-afc2-9c6eabe3a3dc"/>
+                        <code code="PathologyTissueRequest" displayName="Path Tiss" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_3"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_3"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109130400.000"/>
+                        
+                            <value xsi:type="CD">
+                             <originalText><reference value="#TESTRES_3"/></originalText>
+                            </value>
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <informant>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        
+                                        
+                                        
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </informant>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_3"/></text>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="03167b27-d350-43cf-a0d5-0f201524116f"/>
+                <code code="108257001" displayName="Surg Path Final Report" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109130400.000"/>
+                
+
+                <author>
+<time value="20170109191211.507"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                    <participant typeCode="ENT">
+                        <participantRole classCode="PROV">
+                           
+                               <id nullFlavor="UNK"/>
+                           
+                           <playingEntity>
+                               <name>
+                                    <family>Taylor</family>
+                                    <given>Tracy</given>
+                                    <given>E</given>
+                                    
+                               </name>
+                           </playingEntity>
+                        </participantRole>
+                    </participant>
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="92909e5d-a715-4a24-be05-087921f8686f"/>
+                        
+                        <code code="4744753" displayName="Surg Path Final Report" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_4"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_4"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109130400.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="bcdb22b9-3a9f-4211-a978-aeb25ace9902"/>
+                        <code code="4744753" displayName="Surg Path Final Report" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_4"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_4"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109130400.000"/>
+                        
+                            <value xsi:type="CD">
+                             <originalText><reference value="#TESTRES_4"/></originalText>
+                            </value>
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <informant>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        
+                                        
+                                        
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </informant>
+                        
+                            <entryRelationship typeCode="SUBJ">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                                    <code code="48767-8" displayName="Annotation Comment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                    <text><reference value="#TESTCOM_4"/></text>
+                                    <statusCode code="completed" />
+                                </act>
+                            </entryRelationship>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_4"/></text>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="c2379b8a-2555-4d4c-91e4-22b4cea9ba31"/>
+                <code code="CBC" displayName="CBC" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109121701.000"/>
+                
+
+                <author>
+<time value="20170109181727.129"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                    <participant typeCode="ENT">
+                        <participantRole classCode="PROV">
+                           
+                               <id nullFlavor="UNK"/>
+                           
+                           <playingEntity>
+                               <name>
+                                    <family>Taylor</family>
+                                    <given>Tracy</given>
+                                    <given>E</given>
+                                    
+                               </name>
+                           </playingEntity>
+                        </participantRole>
+                    </participant>
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="652b49a8-32bf-4cc4-b76d-615d47c8a861"/>
+                        
+                        <code code="WBC" displayName="WBC" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_5"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_5"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109121701.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="55ea8a5e-3c41-424f-8f66-c7c960b57b57"/>
+                        <code code="WBC" displayName="WBC" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_5"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_5"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109121701.000"/>
+                        
+                            <value xsi:type="PQ" value="5.00" unit="x10(3)mcL"/>
+                            
+                        
+                            <interpretationCode code="NA" displayName="NA" codeSystem="2.16.840.1.113883.5.83"/>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_5"/></text>
+                                
+                                    <value xsi:type="IVL_PQ">
+                                        <low value="4.50"/>
+                                        
+                                        <high value="14.50"/>
+                                        
+                                    </value>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="c1ce7043-f498-4ef0-90da-896e0db48c33"/>
+                <code code="371526002" displayName="Fetal Health Clinic Note" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109120400.000"/>
+                
+
+                <author>
+<time value="20170109180627.023"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="078ad50e-3c78-4db4-8a6c-9f765a21bfcb"/>
+                        
+                        <code code="57331346" displayName="Fetal Health Clinic Note" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_6"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_6"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109120400.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="1a2f178d-5c49-4834-b83b-2f83c8141fac"/>
+                        <code code="57331346" displayName="Fetal Health Clinic Note" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_6"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_6"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109120400.000"/>
+                        
+                            <value xsi:type="CD">
+                             <originalText><reference value="#TESTRES_6"/></originalText>
+                            </value>
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Test</family>
+                                        <given>Pediatrician</given>
+                                        <given>Tracy</given>
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                            <informant>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Test</family>
+                                        <given>Pediatrician</given>
+                                        <given>Tracy</given>
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </informant>
+                        
+                            <entryRelationship typeCode="SUBJ">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                                    <code code="48767-8" displayName="Annotation Comment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                    <text><reference value="#TESTCOM_6"/></text>
+                                    <statusCode code="completed" />
+                                </act>
+                            </entryRelationship>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_6"/></text>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="898e8ea4-70ef-4813-8154-0b7477330414"/>
+                <code code="371526002" displayName="Discharge Summary" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109120238.000"/>
+                
+
+                <author>
+<time value="20170109180308.788"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="de390013-5f81-463c-8f63-a8a2bbece4c4"/>
+                        
+                        <code nullFlavor="UNK" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_7"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_7"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109120238.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="16e52919-10df-4005-8272-03d9ac85e91f"/>
+                        <code nullFlavor="UNK" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_7"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_7"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109120238.000"/>
+                        
+                            <value xsi:type="BINARY" value="" unit="1"/>
+                            
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Test</family>
+                                        <given>Pediatrician</given>
+                                        <given>Tracy</given>
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_7"/></text>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="BATTERY" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                <id root="6708f8c7-b87b-41b2-86d6-b6d05d647a8d"/>
+                <code code="373942005" displayName="Discharge Summary" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109120200.000"/>
+                
+
+                <author>
+<time value="20170109180308.616"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                
+                <component contextConductionInd="true">
+                    <procedure moodCode="EVN" classCode="PROC">
+                        <templateId root="2.16.840.1.113883.10.20.1.29"/>
+                        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+                        <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP Procedure"/>
+                        <id root="0a7333c1-6e60-4e8e-b967-2a0ffa37c1de"/>
+                        
+                        <code code="3658357" displayName="Discharge Summary" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_8"/></originalText>
+                        </code>
+                        <text><reference value="#TESTSUMMARY_8"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109120200.000"/>
+                        
+                        <approachSiteCode/>
+                        <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                    </procedure>
+                </component>
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                        <id root="4def8f0e-eeab-444e-aa57-1b1c38a99e30"/>
+                        <code code="3658357" displayName="Discharge Summary" codeSystem="2.16.840.1.113883.3.1294.100" codeSystemName="LOINC">
+                            <originalText><reference value="#TESTNAME_8"/></originalText>
+                        </code>
+                        <text><reference value="#TESTRES_8"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109120200.000"/>
+                        
+                            <value xsi:type="CD">
+                             <originalText><reference value="#TESTRES_8"/></originalText>
+                            </value>
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Test</family>
+                                        <given>Pediatrician</given>
+                                        <given>Tracy</given>
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                            <informant>
+                                <assignedEntity>
+                                
+                                    <id nullFlavor="UNK"/>
+                                
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                        <family>Test</family>
+                                        <given>Pediatrician</given>
+                                        <given>Tracy</given>
+                                        
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </informant>
+                        
+                            <entryRelationship typeCode="SUBJ">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                                    <code code="48767-8" displayName="Annotation Comment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                    <text><reference value="#TESTCOM_8"/></text>
+                                    <statusCode code="completed" />
+                                </act>
+                            </entryRelationship>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text><reference value="#TESTRANGE_8"/></text>
+                                
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section >
+        <templateId root="2.16.840.1.113883.10.20.22.2.4.1"/>
+        <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="VITAL SIGNS"/>
+        <title>Vital Signs</title>
+        <text>
+                
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Vital Sign</th>
+                        <th>Value</th>
+                        <th>Date</th>
+                        <th>Comments</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr ID="VITALSUMMARY_0">
+                        <td ID="VITALNAME_0">Respiratory Rate</td>
+                        <td ID="VITALRES_0">28 BR/min</td>
+                        <td>01/09/2017</td>
+                        <td ID="VITALCOM_0"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                    
+                    <tr ID="VITALSUMMARY_1">
+                        <td ID="VITALNAME_1">Heart Rate</td>
+                        <td ID="VITALRES_1">130 bpm</td>
+                        <td>01/09/2017</td>
+                        <td ID="VITALCOM_1"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                    
+                    <tr ID="VITALSUMMARY_2">
+                        <td ID="VITALNAME_2">Temperature Celsius</td>
+                        <td ID="VITALRES_2">36.7 Cel</td>
+                        <td>01/09/2017</td>
+                        <td ID="VITALCOM_2"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                    
+                    <tr ID="VITALSUMMARY_3">
+                        <td ID="VITALNAME_3">Temperature Route</td>
+                        <td ID="VITALRES_3">Axillary &lt;br&gt;&lt;/br&gt;(01/09/2017 12:00:00) &lt;sup&gt; &lt;/sup&gt; </td>
+                        <td>01/09/2017</td>
+                        <td ID="VITALCOM_3"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                    
+                    <tr ID="VITALSUMMARY_4">
+                        <td ID="VITALNAME_4">Systolic Blood Pressure Cuff Monitored</td>
+                        <td ID="VITALRES_4">&lt;content ID=&apos;VSEVN2762297018&apos;&gt;103&lt;/content&gt;/&lt;content ID=&apos;VSEVN2762297020&apos;&gt;76&lt;/content&gt; mm[Hg]</td>
+                        <td>01/09/2017</td>
+                        <td ID="VITALCOM_4"></td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+                
+        </text>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.26" />
+                <id root="f656eea1-e153-430c-afa0-23c09ff9d35f"/>
+                <code code="46680005" displayName="Vital signs" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109180000.000"/>
+                
+
+                <author>
+<time value="20170109194315.712"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.27"/>
+                        <id root="e63a7a3e-281a-4272-88cc-73457f1bce80"/>
+                        
+                        <code code="9279-1" displayName="Respiratory Rate" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                        
+                            <originalText><reference value="#VITALNAME_0"/></originalText>
+                        </code>
+                        <text><reference value="#VITALSUMMARY_0"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109180000.000"/>
+                        
+                            <value xsi:type="PQ" value="28" unit="BR/min"/>
+                        
+                            <interpretationCode code="N" displayName="" codeSystem="2.16.840.1.113883.5.83"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id extension="6565656565" root="2.16.840.1.113883.3.1294.300"/>
+                                
+                                    <addr nullFlavor="NA"/>
+                                    <telecom nullFlavor="NA"/>
+                                    <assignedPerson>
+                                        <name>
+                                    <family>Taylor</family>
+                                    <given>Tracy</given>
+                                    <given>E</given>
+                                    
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text>12 - 50</text>
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.26" />
+                <id root="531c3a3c-50c8-49df-9362-d48be512f0bb"/>
+                <code code="46680005" displayName="Vital signs" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109180000.000"/>
+                
+
+                <author>
+<time value="20170109194315.712"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.27"/>
+                        <id root="0712eb46-05fb-418a-a10f-825f8de02d5f"/>
+                        
+                        <code code="8867-4" displayName="Heart Rate" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                        
+                            <originalText><reference value="#VITALNAME_1"/></originalText>
+                        </code>
+                        <text><reference value="#VITALSUMMARY_1"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109180000.000"/>
+                        
+                            <value xsi:type="PQ" value="130" unit="bpm"/>
+                        
+                            <interpretationCode code="N" displayName="" codeSystem="2.16.840.1.113883.5.83"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id extension="6565656565" root="2.16.840.1.113883.3.1294.300"/>
+                                
+                                    <addr nullFlavor="NA"/>
+                                    <telecom nullFlavor="NA"/>
+                                    <assignedPerson>
+                                        <name>
+                                    <family>Taylor</family>
+                                    <given>Tracy</given>
+                                    <given>E</given>
+                                    
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text>60 - 130</text>
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.26" />
+                <id root="101e8155-35b5-44d1-9e61-42c872460229"/>
+                <code code="46680005" displayName="Vital signs" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109180000.000"/>
+                
+
+                <author>
+<time value="20170109194315.712"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.27"/>
+                        <id root="b093c8df-c262-48ef-ad1f-d0ad9ab148f6"/>
+                        
+                        <code nullFlavor="UNK">
+                        
+                            <originalText><reference value="#VITALNAME_2"/></originalText>
+                        </code>
+                        <text><reference value="#VITALSUMMARY_2"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109180000.000"/>
+                        
+                            <value xsi:type="PQ" value="36.7" unit="Cel"/>
+                        
+                            <interpretationCode code="N" displayName="" codeSystem="2.16.840.1.113883.5.83"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id extension="6565656565" root="2.16.840.1.113883.3.1294.300"/>
+                                
+                                    <addr nullFlavor="NA"/>
+                                    <telecom nullFlavor="NA"/>
+                                    <assignedPerson>
+                                        <name>
+                                    <family>Taylor</family>
+                                    <given>Tracy</given>
+                                    <given>E</given>
+                                    
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text>36 - 38.4</text>
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.26" />
+                <id root="298b48b6-b608-40c2-8103-1f9bb90497e8"/>
+                <code code="46680005" displayName="Vital signs" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109180000.000"/>
+                
+
+                <author>
+<time value="20170109194315.712"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.27"/>
+                        <id root="b8da848f-8925-459f-b6c5-5df9e0b2bea7"/>
+                        
+                        <code nullFlavor="UNK">
+                        
+                            <originalText><reference value="#VITALNAME_3"/></originalText>
+                        </code>
+                        <text><reference value="#VITALSUMMARY_3"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109180000.000"/>
+                        
+                            <value xsi:type="CD"  displayName="Axillary &lt;br&gt;&lt;/br&gt;(01/09/2017 12:00:00) &lt;sup&gt; &lt;/sup&gt;"/>
+                        
+                            <interpretationCode nullFlavor="UNK"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id extension="6565656565" root="2.16.840.1.113883.3.1294.300"/>
+                                
+                                    <addr nullFlavor="NA"/>
+                                    <telecom nullFlavor="NA"/>
+                                    <assignedPerson>
+                                        <name>
+                                    <family>Taylor</family>
+                                    <given>Tracy</given>
+                                    <given>E</given>
+                                    
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text></text>
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root="2.16.840.1.113883.10.20.22.4.26" />
+                <id root="1cb55c65-99c0-41da-97a7-ce3a3a4bb927"/>
+                <code code="46680005" displayName="Vital signs" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                <statusCode code="completed"/>
+                
+                    <effectiveTime value="20170109180000.000"/>
+                
+
+                <author>
+<time value="20170109194315.712"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <component contextConductionInd="true">
+                    <observation classCode='OBS' moodCode='EVN' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.27"/>
+                        <id root="3fd62ed7-5dd1-401b-b920-54e20aa81558"/>
+                        
+                        <code nullFlavor="UNK">
+                        
+                            <originalText><reference value="#VITALNAME_4"/></originalText>
+                        </code>
+                        <text><reference value="#VITALSUMMARY_4"/></text>
+                        <statusCode code="completed"/>
+                        
+                            <effectiveTime value="20170109180000.000"/>
+                        
+                            <value xsi:type="PQ" value="&lt;content ID=&apos;VSEVN2762297018&apos;&gt;103&lt;/content&gt;/&lt;content ID=&apos;VSEVN2762297020&apos;&gt;76&lt;/content&gt;" unit="mm[Hg]"/>
+                        
+                            <interpretationCode code="N" displayName="" codeSystem="2.16.840.1.113883.5.83"/>
+                        
+                            <performer>
+                                <assignedEntity>
+                                
+                                    <id extension="6565656565" root="2.16.840.1.113883.3.1294.300"/>
+                                
+                                    <addr nullFlavor="NA"/>
+                                    <telecom nullFlavor="NA"/>
+                                    <assignedPerson>
+                                        <name>
+                                    <family>Taylor</family>
+                                    <given>Tracy</given>
+                                    <given>E</given>
+                                    
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        
+                        <referenceRange>
+                            <observationRange>
+                                <text>84 - 119</text>
+                            </observationRange>
+                        </referenceRange>
+                    </observation>
+                </component>
+            </organizer>
+        </entry>
+        
+    </section>
+</component>
+
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section >
+        <templateId root="2.16.840.1.113883.10.20.22.2.22"/>
+        <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters"/>
+        <title>Encounters</title>
+        <text>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Location Details</th>
+                        <th>Encounter Type</th>
+                        <th>Encounter Number</th>
+                        <th>Reason For Visit</th>
+                        <th>Attending Provider</th>
+                        <th>ADM Date</th>
+                        <th>DC Date</th>
+                        <th>Status</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr ID="VISITSUMMARY_0">
+                        <td>CMH</td>
+                        <td>CMH</td>
+                        <td ID="VISITENCTYPE_0">IN</td>
+                        <td>660048232</td>
+                        <td ID="VISITREASON_0"></td>
+                        <td>Pediatrician Test </td>
+                        <td>01/06/2017</td>
+                        <td>01/08/2017</td>
+                        <td>Active</td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+
+                    <tr ID="VISITSUMMARY_1">
+                        <td>OMCI</td>
+                        <td>CD:671361</td>
+                        <td ID="VISITENCTYPE_1">Inpatient</td>
+                        <td>400000018</td>
+                        <td ID="VISITREASON_1"></td>
+                        <td>  </td>
+                        <td>01/23/2017</td>
+                        <td></td>
+                        <td>Active</td>
+                        <td>Olathe Medical Center, Inc.</td>
+                    </tr>
+
+                    <tr ID="VISITSUMMARY_2">
+                        <td>CMK</td>
+                        <td>CMK</td>
+                        <td ID="VISITENCTYPE_2">IN</td>
+                        <td>660051145</td>
+                        <td ID="VISITREASON_2"></td>
+                        <td>Doctor 9 Testuser </td>
+                        <td>01/30/2017</td>
+                        <td></td>
+                        <td>Active</td>
+                        <td>Children&apos;s Mercy Hospitals and Clinics</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+        </text>
+
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <encounter classCode="ENC" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root='2.16.840.1.113883.10.20.22.4.49'/>
+                
+                <id extension="660048232"  root="2.16.840.1.113883.3.1294.100" />
+                
+                    <code code="IN" displayName="General" codeSystem="2.16.840.1.113883.5.4">
+                
+                    <originalText><reference value="#VISITENCTYPE_0"/></originalText>
+                </code>
+                <text><reference value="#VISITSUMMARY_0"/></text>
+                <effectiveTime>
+                
+                    <low value="20170106123000.000"/>
+                    
+                    <high value="20170108122400.000"/>
+                    
+                
+                </effectiveTime>
+                 
+                    <performer>
+                        <assignedEntity>
+                            
+                                <id nullFlavor="UNK"/>
+                            
+                            <code code="59058001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="General Physician"/>
+                            <addr nullFlavor="UNK"/>
+                            <telecom nullFlavor="UNK"/>
+                            <assignedPerson>
+                                <name>
+                                    <family>Test</family>
+                                    <given>Pediatrician</given>
+                                    <given>Tracy</given>
+                                    
+                                </name>
+                            </assignedPerson>
+                        </assignedEntity>
+                    </performer>
+                 
+
+                <author>
+<time value="20170118215545.660"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <participant typeCode='LOC'>
+                 <participantRole classCode='SDLOC'>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.32"/>
+                  <code code="1188-2" codeSystem="2.16.840.1.113883.6.259" displayName="Facility grounds"/>
+                  <addr nullFlavor="UNK"/>
+                  <telecom nullFlavor="UNK"/>
+                  <playingEntity classCode="PLC">
+                    <name>CMH</name>
+                  </playingEntity>
+                 </participantRole>
+                </participant>
+
+
+                
+
+                
+            </encounter>
+        </entry>
+    
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <encounter classCode="ENC" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root='2.16.840.1.113883.10.20.22.4.49'/>
+                
+                <id extension="400000018"  root="2.16.840.1.113883.3.1367" />
+                
+                    <code code="Inpatient" displayName="General" codeSystem="2.16.840.1.113883.5.4">
+                
+                    <originalText><reference value="#VISITENCTYPE_1"/></originalText>
+                </code>
+                <text><reference value="#VISITSUMMARY_1"/></text>
+                <effectiveTime>
+                
+                    <low value="20170123133100.000"/>
+                    
+                
+                </effectiveTime>
+                 
+
+                <author>
+<time value="20170123193141.764"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1367"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Olathe Medical Center, Inc.</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1367"/>
+<name>Olathe Medical Center, Inc.</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <participant typeCode='LOC'>
+                 <participantRole classCode='SDLOC'>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.32"/>
+                  <code code="1188-2" codeSystem="2.16.840.1.113883.6.259" displayName="Facility grounds"/>
+                  <addr nullFlavor="UNK"/>
+                  <telecom nullFlavor="UNK"/>
+                  <playingEntity classCode="PLC">
+                    <name>OMCI</name>
+                  </playingEntity>
+                 </participantRole>
+                </participant>
+
+
+                
+
+                
+            </encounter>
+        </entry>
+    
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <encounter classCode="ENC" moodCode="EVN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <templateId root='2.16.840.1.113883.10.20.22.4.49'/>
+                
+                <id extension="660051145"  root="2.16.840.1.113883.3.1294.100" />
+                
+                    <code code="IN" displayName="General" codeSystem="2.16.840.1.113883.5.4">
+                
+                    <originalText><reference value="#VISITENCTYPE_2"/></originalText>
+                </code>
+                <text><reference value="#VISITSUMMARY_2"/></text>
+                <effectiveTime>
+                
+                    <low value="20170130093900.000"/>
+                    
+                
+                </effectiveTime>
+                 
+                    <performer>
+                        <assignedEntity>
+                            
+                                <id nullFlavor="UNK"/>
+                            
+                            <code code="59058001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="General Physician"/>
+                            <addr nullFlavor="UNK"/>
+                            <telecom nullFlavor="UNK"/>
+                            <assignedPerson>
+                                <name>
+                                    <family>Testuser</family>
+                                    <given>Doctor 9</given>
+                                    <given>Cerner Kate</given>
+                                    
+                                </name>
+                            </assignedPerson>
+                        </assignedEntity>
+                    </performer>
+                 
+
+                <author>
+<time value="20170130154051.791"/>
+<assignedAuthor>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<addr nullFlavor="NA"/>
+<telecom nullFlavor="NA"/>
+<assignedPerson>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+</assignedPerson>
+<representedOrganization>
+<id root="2.16.840.1.113883.3.1294.100"/>
+<name>Children&apos;s Mercy Hospitals and Clinics</name>
+<telecom nullFlavor="NA"/>
+<addr nullFlavor="NA"/>
+</representedOrganization>
+</assignedAuthor>
+</author>
+
+
+                <participant typeCode='LOC'>
+                 <participantRole classCode='SDLOC'>
+                  <templateId root="2.16.840.1.113883.10.20.22.4.32"/>
+                  <code code="1188-2" codeSystem="2.16.840.1.113883.6.259" displayName="Facility grounds"/>
+                  <addr nullFlavor="UNK"/>
+                  <telecom nullFlavor="UNK"/>
+                  <playingEntity classCode="PLC">
+                    <name>CMK</name>
+                  </playingEntity>
+                 </participantRole>
+                </participant>
+
+
+                
+
+                
+            </encounter>
+        </entry>
+    
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section nullFlavor="NI">
+        <templateId root="2.16.840.1.113883.10.20.22.2.7.1"/>
+        <code code="47519-4" codeSystem="2.16.840.1.113883.6.1"/>
+        <title>Procedures</title>
+        <text>
+        </text>
+        
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section nullFlavor="NI">
+        <templateId root="2.16.840.1.113883.10.20.22.2.10" />
+        <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment plan"/>
+        <title>Plan of Care</title>
+        <text>
+        </text>
+        
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section nullFlavor="NI">
+        <templateId root="2.16.840.1.113883.10.20.22.2.17" />
+        <code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social History"/>
+        <title>Social History</title>
+        <text>
+        </text>
+        
+        <entry typeCode="DRIV" contextConductionInd="true">
+            <observation classCode='OBS' moodCode='EVN'>
+                <templateId root="2.16.840.1.113883.10.20.22.4.78"/>
+                <templateId root="2.16.840.1.113883.10.20.22.4.85"/>
+                <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                <statusCode code="completed"/>
+                <effectiveTime nullFlavor="UNK"/>
+                <value xsi:type="CD" code="266927001" codeSystem="2.16.840.1.113883.6.96"/>
+            </observation>
+        </entry>
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+
+    <section nullFlavor="NI">
+        <templateId root="2.16.840.1.113883.10.20.22.2.9" />
+        <code code="51847-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Assessment and Plan"/>
+        <title>Assessment and Plan</title>
+        <text>
+        </text>
+        
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+    <section>
+        <templateId root="2.16.840.1.113883.10.20.22.2.15" />
+        <code code="10157-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Family Member Diseases"/>
+        <title>Family History</title>
+        <text>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Date</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+            </table>
+        </text>
+        
+    </section>
+</component>
+
+        
+<component typeCode="COMP" contextConductionInd="true">
+    <section>
+        <templateId root="2.16.840.1.113883.10.20.22.2.21" />
+        <code code="42348-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Advance Directives"/>
+        <title>Advance Directives</title>
+        <text>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Order Name</th>
+                        <th>Results</th>
+                        <th>Value</th>
+                        <th>Date</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+            </table>
+        </text>
+        
+    </section>
+</component>
+
+        </structuredBody>
+    </component>
+</ClinicalDocument>

@@ -473,7 +473,11 @@ class CcdaDocument(object):
             vital_result.code = messages.Code(**vital_result_code)
             value_attribute = value_node.getAttribute('value')
             if value_attribute:
-                vital_result.value = long(float(value_attribute))
+                #if not value_attribute.isalnum():
+                try:
+                    vital_result.value = long(float(value_attribute))
+                except ValueError:
+                    vital_result.value = None
             else:
                 vital_result.value = None
             vital_result.unit = value_node.getAttribute('unit')
