@@ -7,9 +7,9 @@ import json
 import logging
 
 TESTDATA_DIR = os.path.join(os.path.dirname(__file__), '../testdata')
-logging.basicConfig(filename='test.log', filemode='w', format='%(asctime)s--%(levelname)s:--%(message)s',
+logging.basicConfig(filename='Vitals_test.log', filemode='w', format='%(asctime)s--%(levelname)s:--%(message)s',
                         level=logging.DEBUG, datefmt='%d/%m/%Y %I:%M:%S %P')
-
+vital_field = None
 class CcdaDocumentTestCase(unittest.TestCase):
   #def _test_to_csv(self, fp):
   #  """Verify CCDA document can be converted to a CSV file."""
@@ -23,8 +23,15 @@ class CcdaDocumentTestCase(unittest.TestCase):
             logging.error("Testing for field: [%s] under <%s> ~ for value type %s", field, tag, type(input_dict))
         else:
             for item in input_dict:
-                if input_dict[item] in ['', ' ', None]:
-                    logging.error("Value for field: [%s] under <%s> ~ for value type %s", item, tag, type(input_dict[item]))
+                if item == 'name':
+                    if input_dict[item] in ['', ' ', None]:
+                        logging.error("Value for field: [%s] under <%s> ~ for value type %s", item, tag, type(input_dict[item]))
+                        global vital_field
+                        vital_field = None
+                    else:
+                        global vital_field
+                        vital_field = input_dict[item]
+                        logging.info("Field is : %s  ", vital_field)
 
     def verify_list_entry(self, field, tag, input_list):  # Access Value of a field, which is a list.
         if len(input_list) == 0:
@@ -34,11 +41,16 @@ class CcdaDocumentTestCase(unittest.TestCase):
                 for item in input_list[i]:
                     if type(input_list[i][item]) == dict:  # In a list, value of a field as dictionary
                         str(tag).join(item)
-                        #str(tag).join("\\")
+
                         self.verify_dict_entry(item, tag, input_list[i][item])
                     else:
-                        if input_list[i][item] in ['', ' ', None]:  # In a list, value of a field is a String
-                            logging.error("Value for field: [%s] under <%s> ~ for value type %s", item, tag, type(input_list[i][item]))
+                        if item in ['unit']:
+                            if input_list[i][item] in ['', ' ', None]:  # In a list, value of a field is a String
+                                logging.error("Value for field: [%s] under <%s> ~ for value type %s", item, tag, type(input_list[i][item]))
+
+                            else:
+                                if vital_field != None:
+                                    logging.info("%s unit is = %s  ", vital_field, input_list[i][item])
 
     def _test_to_message(self, fp):
         """Verify CCDA document can be converted to a ProtoRPC message."""
@@ -56,12 +68,15 @@ class CcdaDocumentTestCase(unittest.TestCase):
         # TODO: Implement stronger test. Verify generated message against testdata.
         JSON_file = json.loads(json_message)  # string complete_JSON to JSON file
         for elements in JSON_file:     # Each elements under json file, such as 'medication', 'vitals', 'labs' e.t.c
-            if elements not in ['demographics', 'social', 'encounter']:
+            if elements in ['vitals']:
                 msg = "\n---Testing for " + elements + " from file " + str(fp.name) + "---"
                 logging.info(msg)
                 for entry in range(len(JSON_file[elements])):    # An entry is a dictionary from a list of entries (dictionaries) for elements
                     for key in JSON_file[elements][entry]:  # Key value is a name for each <name:value> in an entry
 
+                        global vital_field
+                        vital_field = None
+                        
                         if type(JSON_file[elements][entry][key]) == dict:
                             self.verify_dict_entry(key, JSON_file[elements][entry], JSON_file[elements][entry][key])
 
@@ -71,6 +86,8 @@ class CcdaDocumentTestCase(unittest.TestCase):
                             if JSON_file[elements][entry][key] in ['', ' ', None]:
                                 logging.error("Value for field: [%s] under <%s> ~ for value type %s", key, JSON_file[elements][entry],
                                               type(JSON_file[elements][entry][key]))
+                                '''global vital_field
+                                vital_field = None'''
 
     def test_sample_ccda_files(self):
         """Test all sample CCDA files in the testdata directory."""

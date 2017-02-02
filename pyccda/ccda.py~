@@ -170,13 +170,13 @@ class CcdaTree(object):
       val = effectiveTime_node.getAttribute('value')  if effectiveTime_node else None
       if val is None:
 	'''
-	When val is None, for e.g.	
+	When val is None for e.g.	
 		<effectiveTime>
 			<low value="20110213"/>
 			<high nullFlavor="NA"/>
 		</effectiveTime>
 
-	When val is not None, for e.g.
+	When val is not None for e.g.
 		<effectiveTime value="200003231430"/>
 	'''
         low_nodes = effectiveTime_node.getElementsByTagName('low')
@@ -483,11 +483,7 @@ class CcdaDocument(object):
             vital_result.code = messages.Code(**vital_result_code)
             value_attribute = value_node.getAttribute('value')
             if value_attribute:
-                #if not value_attribute.isalnum():
-                try:
-                    vital_result.value = long(float(value_attribute))
-                except ValueError:
-                    vital_result.value = None
+                vital_result.value = long(float(value_attribute))
             else:
                 vital_result.value = None
             vital_result.unit = value_node.getAttribute('unit')
